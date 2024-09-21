@@ -1,0 +1,29 @@
+[2024-09-21T17:07:25.004+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-21T17:07:25.024+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: localNFLDataIngestionDag.ingestData manual__2024-09-21T16:55:45.395890+00:00 [queued]>
+[2024-09-21T17:07:25.034+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: localNFLDataIngestionDag.ingestData manual__2024-09-21T16:55:45.395890+00:00 [queued]>
+[2024-09-21T17:07:25.035+0000] {taskinstance.py:2856} INFO - Starting attempt 9 of 9
+[2024-09-21T17:07:25.051+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): ingestData> on 2024-09-21 16:55:45.395890+00:00
+[2024-09-21T17:07:25.058+0000] {standard_task_runner.py:72} INFO - Started process 803 to run task
+[2024-09-21T17:07:25.061+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'localNFLDataIngestionDag', 'ingestData', 'manual__2024-09-21T16:55:45.395890+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion_local.py', '--cfg-path', '/tmp/tmpvyuvt2dh']
+[2024-09-21T17:07:25.063+0000] {standard_task_runner.py:105} INFO - Job 43: Subtask ingestData
+[2024-09-21T17:07:25.113+0000] {task_command.py:467} INFO - Running <TaskInstance: localNFLDataIngestionDag.ingestData manual__2024-09-21T16:55:45.395890+00:00 [running]> on host a38c0324a413
+[2024-09-21T17:07:25.205+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='localNFLDataIngestionDag' AIRFLOW_CTX_TASK_ID='ingestData' AIRFLOW_CTX_EXECUTION_DATE='2024-09-21T16:55:45.395890+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-21T16:55:45.395890+00:00'
+[2024-09-21T17:07:25.207+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-09-21T17:07:25.208+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-09-21T17:07:25.209+0000] {logging_mixin.py:190} INFO - Current task name:ingestData state:running start_date:2024-09-21 17:07:25.025652+00:00
+[2024-09-21T17:07:25.210+0000] {logging_mixin.py:190} INFO - Dag name:localNFLDataIngestionDag and current dag run status:running
+[2024-09-21T17:07:25.210+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-21T17:07:25.248+0000] {logging_mixin.py:190} INFO - connection established
+[2024-09-21T17:07:25.294+0000] {logging_mixin.py:190} INFO - data inserted
+[2024-09-21T17:07:25.295+0000] {logging_mixin.py:190} INFO - Max season =  2023
+[2024-09-21T17:07:25.296+0000] {logging_mixin.py:190} INFO - Max Week of most recent season =  22
+[2024-09-21T17:07:25.299+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-21T17:07:25.310+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-21T17:07:25.311+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=localNFLDataIngestionDag, task_id=ingestData, run_id=manual__2024-09-21T16:55:45.395890+00:00, execution_date=20240921T165545, start_date=20240921T170725, end_date=20240921T170725
+[2024-09-21T17:07:25.323+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-09-21T17:07:25.324+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-09-21T17:07:25.324+0000] {logging_mixin.py:190} INFO - Dag name:localNFLDataIngestionDag queued_at:2024-09-21 17:07:20.019173+00:00
+[2024-09-21T17:07:25.325+0000] {logging_mixin.py:190} INFO - Task hostname:a38c0324a413 operator:PythonOperator
+[2024-09-21T17:07:25.356+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2024-09-21T17:07:25.374+0000] {taskinstance.py:3891} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-21T17:07:25.376+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
